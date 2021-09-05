@@ -6,7 +6,7 @@ from datetime import datetime  # to timestamp stuff
 # After saving in xlsx format, we can now work on the xml files with openpyxl
 def read_worksheet(workbook, worksheet):
     '''
-    Generic function that returns an worksheet object
+    Generic function that returns a worksheet object
 
     :param workbook: str containing the workbook name and path
     :param worksheet: str, worksheet name
@@ -19,9 +19,10 @@ def read_worksheet(workbook, worksheet):
 # let's iterate all pivot tables and find out which ones we'll be working with!
 def pivot_names(worksheet):
     '''
+    Function that queries pivot tables' names in case there's specific pivot tables the user want to use
+
     :param worksheet: worksheet object from openpyxl
     :return: list of pivot names
-    Function that queries pivot tables' names in case there's specific pivot tables the user want to use
     '''
     names = []
     for pivot in worksheet._pivots:
@@ -33,6 +34,7 @@ def pivot_names(worksheet):
 def df_pivot(pivot_cache):
     '''
     Generic Function that returns both a DataFrame with the pivot table records and its dimensions in a dictionary
+
     :param pivot_cache: cacheDefinitions object from openpyxl
     :returns    DataFrame object: a pandas dataframe containing record's values and cacheFields names in columns
                 dict_dim: dictionary containing all dimensions names and items from sharedItems fields
@@ -70,6 +72,7 @@ def df_pivot(pivot_cache):
 def remap(df, dict_dim):
     '''
     Generic function to remap fact table with dimensions from cacheDefinitions
+
     :param df: DataFrame object containing the fact table from record's values
     :param dict_dim: dictionary containing all dimensions names and items from sharedItems fields
     :return: DataFrame object containing actual (human readable) data
@@ -89,6 +92,7 @@ def remap(df, dict_dim):
 def build_schema(nice_table):
     '''
     Specific Function that builds a given schema
+
     :param nice_table: a DataFrame object containing specific pivot table schema
     :return: DataFrame object with following schema:
     Column	    Type

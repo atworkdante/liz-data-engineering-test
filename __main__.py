@@ -4,8 +4,8 @@ from recover_xls_data import *
 # Let's start with the generic stuff
 ###
 ws = read_worksheet(workbook="vendas-combustiveis-m3.xlsx", worksheet="Plan1")
-nms = pivot_names(ws)  # only used to check which ones we're working with
-print(nms)
+# nms = pivot_names(ws)  # only used to check which ones we're working with
+# print(nms)
 
 ###
 # Sales of oil derivative fuels by UF and product - Tabela dinâmica1 -> index 3
