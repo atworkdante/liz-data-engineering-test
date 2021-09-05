@@ -32,7 +32,7 @@ def pivot_names(worksheet):
 # so now we have table definitions, let's get cacheDefinitions (instead of reading each pivotCacheDefinition.xml)
 def df_pivot(pivot_cache):
     '''
-    Generic Function that returns both a DataFrame with the pivot table records and it's dimensions in a dictionary
+    Generic Function that returns both a DataFrame with the pivot table records and its dimensions in a dictionary
     :param pivot_cache: cacheDefinitions object from openpyxl
     :returns    DataFrame object: a pandas dataframe containing record's values and cacheFields names in columns
                 dict_dim: dictionary containing all dimensions names and items from sharedItems fields
