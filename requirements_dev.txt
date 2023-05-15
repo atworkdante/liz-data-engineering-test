@@ -1,3 +1,4 @@
+autopep8==2.0.2
 black==22.3.0
 build==0.7.0
 bump2version==1.0.1
@@ -5,10 +6,12 @@ coverage==5.5
 flake8==4.0.1
 isort==5.10.1
 mypy==0.910
+notebook==6.5.4
 pylint==2.12.2
 pytest==6.2.4
 pytest-cov==2.12.1
-setuptools==57.4.0
+rich==13.3.5
+setuptools==67.7.2
 twine==3.7.1
 types-pytz==2021.3.1
 types-six==1.16.3
